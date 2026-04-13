@@ -119,6 +119,35 @@
     .cta-card p{color:rgba(255,255,255,.72);margin-top:6px;line-height:1.65}
     .floating-up{position:fixed;right:18px;bottom:18px;z-index:30;width:62px;height:62px;border-radius:50%;border:none;background:linear-gradient(180deg,#25d366,#13a753);color:#fff;font-size:1.4rem;font-weight:900;cursor:pointer;box-shadow:0 18px 34px rgba(19,167,83,.34)}
 
+    img,svg,video,canvas,iframe{max-width:100%;height:auto}
+    *{min-width:0}
+    .hero-grid > *,
+    .hero-actions > *,
+    .hero-stats > *,
+    .units-grid > *,
+    .dynamic-buttons > *,
+    .grid-form > *,
+    .cta-card > *,
+    .step > *{min-width:0}
+    .btn{
+      text-align:center;
+      white-space:normal;
+      word-break:break-word;
+    }
+    .top-badge,
+    .hero-copy h1,
+    .hero-copy p,
+    .section-head h2,
+    .section-head p,
+    .unit-card strong,
+    .unit-card span,
+    .alert-box,
+    .result,
+    .ghost-note{
+      overflow-wrap:anywhere;
+      word-break:break-word;
+    }
+
     @media (max-width: 1100px){
       .hero-grid,.units-grid,.dynamic-buttons,.grid-form{grid-template-columns:1fr}
       .hero-copy,.hero-stats{max-width:100%}
@@ -227,6 +256,36 @@
       }
       .cta-card > *{
         width:100%;
+      }
+
+      html,body{
+        width:100%;
+        overflow-x:hidden;
+      }
+      .hero,
+      .section,
+      .card-shell,
+      .units-panel,
+      .cta-card,
+      .form-card,
+      .steps-card,
+      .dynamic-box{
+        overflow:hidden;
+      }
+      .hero-copy,
+      .hero-visual,
+      .hero-stat,
+      .unit-card,
+      .field,
+      .step{
+        min-width:0;
+      }
+      .select,
+      .input,
+      .textarea,
+      .submit-main,
+      .submit-alt{
+        max-width:100%;
       }
       .floating-up{
         width:56px;
